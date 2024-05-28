@@ -3,4 +3,7 @@
     <string name="app_name">My Reddit Application</string>
     <string name="author">"Автор: "</string>
     <string name="x_hours_ago">" годин тому"</string>
+    <string name="one_hour_ago">1 годину тому</string>
+    <string name="less_than_an_hour_ago">менше години тому</string>
+    <string name="days_ago">" днiв тому"</string>
 </resources>

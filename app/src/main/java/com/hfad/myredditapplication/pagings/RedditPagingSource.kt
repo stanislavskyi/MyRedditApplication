@@ -21,12 +21,12 @@ class RedditPagingSource(
                 .blockingGet()
 
             Log.d("TEST_OF_LOADING_DATA_POPULAR_POST", "Response: $response")
-            val children = response.data?.children ?: emptyList()
+            val children = response.data.children ?: emptyList()
 
             LoadResult.Page(
                 data = children,
                 prevKey = null,
-                nextKey = response.data?.after
+                nextKey = response.data.after
             )
         } catch (e: Exception) {
             Log.e("TEST_OF_LOADING_DATA_POPULAR_POST", "Error loading data", e)

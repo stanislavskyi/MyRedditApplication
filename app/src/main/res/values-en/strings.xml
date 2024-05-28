@@ -3,4 +3,7 @@
     <string name="app_name">My Reddit Application</string>
     <string name="author">"Author: "</string>
     <string name="x_hours_ago">" hours age"</string>
+    <string name="one_hour_ago">1 hour ago</string>
+    <string name="less_than_an_hour_ago">less than an hour ago</string>
+    <string name="days_ago">"  days ago"</string>
 </resources>

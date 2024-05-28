@@ -2,4 +2,7 @@
     <string name="app_name">My Reddit Application</string>
     <string name="author">Автор: </string>
     <string name="x_hours_ago">" часов назад"</string>
+    <string name="one_hour_ago">1 час назад</string>
+    <string name="less_than_an_hour_ago">менее часа назад</string>
+    <string name="days_ago"> дней назад</string>
 </resources>
