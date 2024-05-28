@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Reddit Application</string>
+    <string name="author">Автор: </string>
+    <string name="x_hours_ago">" часов назад"</string>
 </resources>

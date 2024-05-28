@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Reddit Application</string>
+    <string name="author">"Author: "</string>
+    <string name="x_hours_ago">" hours age"</string>
+</resources>
