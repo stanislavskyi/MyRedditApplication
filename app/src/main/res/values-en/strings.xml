@@ -6,4 +6,7 @@
     <string name="one_hour_ago">1 hour ago</string>
     <string name="less_than_an_hour_ago">less than an hour ago</string>
     <string name="days_ago">"  days ago"</string>
+    <string name="permission_denied">Permission denied</string>
+    <string name="unknown_permission_request">Unknown permission request</string>
+    <string name="TEST_OF_DOWNLOAD_IMAGE">TEST_OF_DOWNLOAD_IMAGE</string>
 </resources>

@@ -12,7 +12,8 @@ import com.squareup.picasso.Picasso
 import java.io.OutputStream
 import java.util.UUID
 
-class RedditViewModel(
+
+class RedditViewModel (
     private val imageUrl: String,
     private val application: Application,
 ) : ViewModel() {

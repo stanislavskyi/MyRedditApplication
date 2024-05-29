@@ -16,7 +16,9 @@ import com.hfad.myredditapplication.databinding.FragmentRedditItemBinding
 import com.hfad.myredditapplication.viewmodels.RedditViewModel
 import com.hfad.myredditapplication.viewmodels.RedditViewModelFactory
 import com.squareup.picasso.Picasso
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RedditFragment : Fragment() {
 
     private lateinit var imageUrl: String
@@ -51,9 +53,9 @@ class RedditFragment : Fragment() {
         initViews()
 
         val args = requireArguments()
-        imageUrl = args.getString(EXTRA_SCREEN_MODE)!!
+        imageUrl = args.getString(EXTRA_IMAGE_URL)!!
 
-        Log.d("TEST_OF_DOWNLOAD_IMAGE", imageUrl)
+        Log.d(getString(R.string.TEST_OF_DOWNLOAD_IMAGE), imageUrl)
 
         binding.buttonSaveImage.setOnClickListener {
             if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
@@ -70,13 +72,16 @@ class RedditFragment : Fragment() {
                 if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
                     redditViewModel.downloadImage()
                 } else {
-                    Toast.makeText(requireContext(), "Permission denied", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(),
+                        getString(R.string.permission_denied), Toast.LENGTH_SHORT).show()
                 }
             }
             else -> {
-                // Ignore all other requests
+                Toast.makeText(requireContext(),
+                    getString(R.string.unknown_permission_request), Toast.LENGTH_SHORT).show()
             }
         }
+
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
@@ -84,7 +89,7 @@ class RedditFragment : Fragment() {
     private fun initViews() {
 
         val args = requireArguments()
-        val image = args.getString(EXTRA_SCREEN_MODE)
+        val image = args.getString(EXTRA_IMAGE_URL)
         Picasso.get().load(image).error(android.R.drawable.ic_menu_gallery).into(binding.imageView)
     }
 
@@ -94,13 +99,13 @@ class RedditFragment : Fragment() {
     }
 
     companion object {
-        private const val EXTRA_SCREEN_MODE = "extra_mode"
+        private const val EXTRA_IMAGE_URL = "extra_image_url"
         private const val STORAGE_PERMISSION_CODE: Int = 1000
 
         fun newInstanceAddItem(imageUrl: String): RedditFragment {
             return RedditFragment().apply {
                 arguments = Bundle().apply {
-                    putString(EXTRA_SCREEN_MODE, imageUrl)
+                    putString(EXTRA_IMAGE_URL, imageUrl)
                 }
             }
         }

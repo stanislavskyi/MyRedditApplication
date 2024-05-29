@@ -5,4 +5,7 @@
     <string name="one_hour_ago">1 час назад</string>
     <string name="less_than_an_hour_ago">менее часа назад</string>
     <string name="days_ago"> дней назад</string>
+    <string name="permission_denied">Доступ запрещен</string>
+    <string name="unknown_permission_request">" Неизвестный запрос разрешения"</string>
+    <string name="TEST_OF_DOWNLOAD_IMAGE">TEST_OF_DOWNLOAD_IMAGE</string>
 </resources>

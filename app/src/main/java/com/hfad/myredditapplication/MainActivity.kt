@@ -1,7 +1,6 @@
 package com.hfad.myredditapplication
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -14,14 +13,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.hfad.myredditapplication.adapters.RedditAdapter
 import com.hfad.myredditapplication.viewmodels.MainViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private val mainViewModel: MainViewModel by lazy {
         ViewModelProvider(this)[MainViewModel::class.java]
     }
+    //private lateinit var mainViewModel: MainViewModel
 
     private lateinit var recyclerViewRedditPopularPosts: RecyclerView
     private lateinit var redditAdapter: RedditAdapter
@@ -36,8 +38,11 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        redditContainer = findViewById(R.id.reddit_container)
 
+
+        //mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
+
+        redditContainer = findViewById(R.id.reddit_container)
         recyclerViewSetup()
         loadData()
     }
@@ -61,6 +66,7 @@ class MainActivity : AppCompatActivity() {
 
         setupClickListener()
 
+
     }
     private fun setupClickListener() {
         redditAdapter.onRedditPostClickListener = {
@@ -81,8 +87,5 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.reddit_container, fragment)
             .addToBackStack(null)
             .commit()
-    }
-    companion object{
-        private const val REQUEST_CODE = 1001
     }
 }

@@ -8,7 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RedditManipulateActivity : AppCompatActivity() {
 
     private var imageUrl = UNKNOWN_IMAGE_URL
@@ -43,19 +45,19 @@ class RedditManipulateActivity : AppCompatActivity() {
     }
 
     private fun parseIntent() {
-        if (!intent.hasExtra(EXTRA_IMAGE)) {
+        if (!intent.hasExtra(EXTRA_IMAGE_URL)) {
             throw RuntimeException("Param extra image is absent")
         }
-        imageUrl = intent.getStringExtra(EXTRA_IMAGE) ?: ""
+        imageUrl = intent.getStringExtra(EXTRA_IMAGE_URL) ?: ""
     }
 
     companion object {
-        private const val EXTRA_IMAGE = "extra_image"
+        private const val EXTRA_IMAGE_URL = "extra_image_url"
         private const val UNKNOWN_IMAGE_URL = ""
 
         fun newIntentImageMode(imageUrl: String, context: Context): Intent {
             val intent = Intent(context, RedditManipulateActivity::class.java)
-            intent.putExtra(EXTRA_IMAGE, imageUrl)
+            intent.putExtra(EXTRA_IMAGE_URL, imageUrl)
             return intent
         }
     }

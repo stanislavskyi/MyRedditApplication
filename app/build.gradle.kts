@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
 
     id("com.google.devtools.ksp")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -87,4 +88,8 @@ dependencies {
 
     // optional - Jetpack Compose integration
     implementation("androidx.paging:paging-compose:3.3.0")
+
+    //Dagger-Hilt
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    ksp("com.google.dagger:hilt-compiler:2.51.1")
 }
