@@ -6,4 +6,7 @@
     <string name="one_hour_ago">1 годину тому</string>
     <string name="less_than_an_hour_ago">менше години тому</string>
     <string name="days_ago">" днiв тому"</string>
+    <string name="permission_denied">" Доступ заборонено"</string>
+    <string name="unknown_permission_request">" Невідомий запит на дозвіл"</string>
+    <string name="TEST_OF_DOWNLOAD_IMAGE">TEST_OF_DOWNLOAD_IMAGE</string>
 </resources>
