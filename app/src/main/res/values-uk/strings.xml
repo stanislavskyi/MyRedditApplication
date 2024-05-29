@@ -9,4 +9,8 @@
     <string name="permission_denied">" Доступ заборонено"</string>
     <string name="unknown_permission_request">" Невідомий запит на дозвіл"</string>
     <string name="TEST_OF_DOWNLOAD_IMAGE">TEST_OF_DOWNLOAD_IMAGE</string>
+    <string name="failed_to_save_image">" Не вдалося зберегти зображення"</string>
+    <string name="image_saved_to_gallery_as">" Зображення збережене у галереї як %1$s."</string>
+    <string name="failed_to_create_new_mediastore_record">" Неможливо створити новий запис MediaStore."</string>
+    <string name="buttonSaveImage">" Зберегти зображення"</string>
 </resources>

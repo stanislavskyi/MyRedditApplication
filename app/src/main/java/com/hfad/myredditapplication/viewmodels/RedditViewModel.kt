@@ -8,6 +8,7 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.widget.Toast
 import androidx.lifecycle.ViewModel
+import com.hfad.myredditapplication.R
 import com.squareup.picasso.Picasso
 import java.io.OutputStream
 import java.util.UUID
@@ -61,20 +62,20 @@ class RedditViewModel (
                 os.close()
                 Toast.makeText(
                     application.applicationContext,
-                    "Image saved to gallery as $uniqueFileName",
+                    application.applicationContext.getString(R.string.image_saved_to_gallery_as, uniqueFileName),
                     Toast.LENGTH_SHORT
                 ).show()
             } ?: run {
                 Toast.makeText(
                     application.applicationContext,
-                    "Failed to save image",
+                    application.applicationContext.getString(R.string.failed_to_save_image),
                     Toast.LENGTH_SHORT
                 ).show()
             }
         } else {
             Toast.makeText(
                 application.applicationContext,
-                "Failed to create new MediaStore record",
+                application.applicationContext.getString(R.string.failed_to_create_new_mediastore_record),
                 Toast.LENGTH_SHORT
             ).show()
         }

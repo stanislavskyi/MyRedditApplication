@@ -8,4 +8,8 @@
     <string name="permission_denied">Доступ запрещен</string>
     <string name="unknown_permission_request">" Неизвестный запрос разрешения"</string>
     <string name="TEST_OF_DOWNLOAD_IMAGE">TEST_OF_DOWNLOAD_IMAGE</string>
+    <string name="failed_to_save_image">" Не удалось сохранить изображение"</string>
+    <string name="image_saved_to_gallery_as">" Изображение сохранено в галерее как %1$s."</string>
+    <string name="failed_to_create_new_mediastore_record">" Не удалось создать новую запись MediaStore."</string>
+    <string name="buttonSaveImage">Сохранить изображение</string>
 </resources>

@@ -9,4 +9,8 @@
     <string name="permission_denied">Permission denied</string>
     <string name="unknown_permission_request">Unknown permission request</string>
     <string name="TEST_OF_DOWNLOAD_IMAGE">TEST_OF_DOWNLOAD_IMAGE</string>
+    <string name="failed_to_save_image">Failed to save image</string>
+    <string name="image_saved_to_gallery_as">Image saved to gallery as %1$s</string>
+    <string name="failed_to_create_new_mediastore_record">Failed to create new MediaStore record</string>
+    <string name="buttonSaveImage">Save image</string>
 </resources>

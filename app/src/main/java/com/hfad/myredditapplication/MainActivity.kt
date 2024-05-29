@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
     private val mainViewModel: MainViewModel by lazy {
         ViewModelProvider(this)[MainViewModel::class.java]
     }
-    //private lateinit var mainViewModel: MainViewModel
 
     private lateinit var recyclerViewRedditPopularPosts: RecyclerView
     private lateinit var redditAdapter: RedditAdapter
